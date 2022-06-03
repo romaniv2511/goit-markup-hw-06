@@ -432,21 +432,21 @@
             <form class="callback-form" autocomplete="off">
                 <label class="field">
                     <span class="label">Имя</span>
-                    <input type="text" name="name" class="callback-input"/>
+                    <input type="text" name="name" class="callback-input" required/>
                     <svg class="label-icon" width="18" height="18">
                         <use href="./img/sprite.svg#icon-person"></use>
                     </svg>
                 </label>
                 <label class="field">
                     <span class="label">Телефон</span>
-                    <input type="tel" name="tel" class="callback-input" />
+                    <input type="tel" name="tel" class="callback-input" required/>
                     <svg class="label-icon" width="18" height="18">
                         <use href="./img/sprite.svg#icon-phone"></use>
                     </svg>
                 </label>
                 <label class="field">
                     <span class="label">Почта</span>
-                    <input type="email" name="email" class="callback-input"/>
+                    <input type="email" name="email" class="callback-input" required/>
                     <svg class="label-icon" width="18" height="18">
                         <use href="./img/sprite.svg#icon-email"></use>
                     </svg>
@@ -456,13 +456,13 @@
                     <span class="label">Комментарий</span>
                     <textarea class="comment" name="comment" placeholder="Введите текст"></textarea>
                 </label>
-                <div>
-                    <label class="agreement">
-                        <input type="checkbox" class="checkbox visually-hidden">
-                        <span class="icon"></span>
-                        <span class="agreement-text">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>  </span>
-                    </label>
-                </div>
+
+                <label class="agreement">
+                    <input type="checkbox" class="checkbox visually-hidden" required>
+                    <span class="icon"></span>
+                    <span class="agreement-text">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>  </span>
+                </label>
+               
                 <button class="form-btn" type="submit">Отправить</button>
             </form>
         </div>

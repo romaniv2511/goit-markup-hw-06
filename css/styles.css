@@ -304,6 +304,12 @@ img {
     line-height: 1.25;
     color: var(--primery-bgr-color);
     background-color: transparent;
+
+    transform: border-color var(--duration) var(--timing-function);
+}
+.subs-input:hover,
+.subs-input:focus {
+    border-color: var(--accent-color);
 }
 .subs-btn {
     display: flex;
@@ -326,6 +332,10 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;  
+}
+.subs-btn:hover,
+.subs-btn:focus {
+    background-color: #188CE8;
 }
 .subs-btn > .text {
     margin-right: 10px;
@@ -693,6 +703,12 @@ fill: var(--primery-bgr-color);
     background-color: transparent;
 
     cursor: pointer;
+
+    transform: fill var(--duration) var(--timing-function);
+}
+.btn-close:hover, 
+.btn-close:focus {
+    fill: var(--accent-color);
 }
 .modal-text {
     margin-bottom: 12px;
@@ -735,20 +751,24 @@ fill: var(--primery-bgr-color);
 .callback-input {
     height: 40px;
 }
-.callback-input:focus,
-.comment:focus {
+.field:focus-within .callback-input,
+.field:focus-within .comment,
+.field:hover .callback-input,
+.field:hover .comment {
     border-color: var(--accent-color);
     outline: none;
 }
-.field:focus-within .label-icon {
-    fill: var(--accent-color);
-}
+
 .label-icon {
     position: absolute;
     top: 50%;
     left: 12px;
 
     transform: fill var(--duration) var(--timing-function);
+}
+.field:hover .label-icon,
+.field:focus-within .label-icon {
+    fill: var(--accent-color);
 }
 .comment {
     display: block;
@@ -757,6 +777,8 @@ fill: var(--primery-bgr-color);
 
     height: 120px;
     resize: none;
+
+    transform: border-color var(--duration) var(--timing-function);
 }
 .comment::placeholder {
     font-size: 14px;
@@ -784,12 +806,19 @@ fill: var(--primery-bgr-color);
     height: 15px;
     border: 2px solid var(--title-color);
     border-radius: 2px;
+
+    transform: border-color var(--duration) var(--timing-function),
+    background-image var(--duration) var(--timing-function);
     
+}
+.agreement:hover .icon,
+.checkbox:focus-within + .icon {
+    border-color: var(--accent-color);
 }
 .checkbox:checked + .icon {
     border-color: var(--accent-color);
     background-color: var(--accent-color);
-    background-image: url(../img/icon-check.svg);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='15' rx='2' fill='%232196F3'/%3E%3Cpath d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
     background-size: contain;
     background-origin: border-box;
 
@@ -809,4 +838,10 @@ fill: var(--primery-bgr-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+
+    transform: background-color var(--duration) var(--timing-function);
+}
+.form-btn:hover,
+.form-btn:focus {
+    background-color: #188CE8;
 }
